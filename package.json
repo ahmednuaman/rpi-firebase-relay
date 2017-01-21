@@ -1,0 +1,54 @@
+{
+  "name": "rpi-firebase-relay",
+  "version": "1.0.0",
+  "description": "A nodejs project to get a relay controlled by Firebase on a Raspberry PI",
+  "main": "index.js",
+  "scripts": {
+    "nodemon": "nodemon --exec babel-node -- ./index.js",
+    "start": "forever start -c 'node -r babel-register' ./index.js",
+    "test": "standard",
+    "watch": "concurrently 'npm run watch:js' 'npm run nodemon'",
+    "watch:js": "onchange '*.js' 'lib/*.js' -- npm t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmednuaman/rpi-firebase-relay.git"
+  },
+  "keywords": [
+    "rpi",
+    "raspberry",
+    "pi",
+    "gpio",
+    "firebase",
+    "relay"
+  ],
+  "author": "Ahmed Nuaman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmednuaman/rpi-firebase-relay/issues"
+  },
+  "homepage": "https://github.com/ahmednuaman/rpi-firebase-relay#readme",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "firebase": "^3.6.6",
+    "forever": "^0.15.3",
+    "moment": "^2.16.0",
+    "redux": "^3.6.0",
+    "rpio": "^0.9.12"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "nodemon": "^1.11.0",
+    "onchange": "^3.0.2",
+    "standard": "^8.5.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  }
+}
