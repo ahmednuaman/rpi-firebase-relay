@@ -1,7 +1,13 @@
 {
-  "apiKey": "",
-  "authDomain": "",
-  "databaseURL": "",
-  "email": "",
-  "password": ""
+  "firebase": {
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "email": "",
+    "password": ""
+  },
+  "particle": {
+    "access_token": "",
+    "particles": [""]
+  }
 }
