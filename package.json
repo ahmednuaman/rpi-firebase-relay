@@ -35,7 +35,6 @@
     "babel-register": "^6.18.0",
     "firebase": "^3.6.6",
     "forever": "^0.15.3",
-    "moment": "^2.16.0",
     "redux": "^3.6.0",
     "request": "^2.79.0",
     "rpio": "^0.9.12"
