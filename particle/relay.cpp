@@ -4,14 +4,14 @@
 SYSTEM_MODE(SEMI_AUTOMATIC); 
 #endif
 
-int PIN = D7;
+int RELAY_PIN = D7;
 
 int relayToggle(String command) {
     if (command == "1") {
-        digitalWrite(PIN, HIGH);
+        digitalWrite(RELAY_PIN, HIGH);
         return 1;
     } else if (command == "0") {
-        digitalWrite(PIN, LOW);
+        digitalWrite(RELAY_PIN, LOW);
         return 0;
     } else {
         return -1;
@@ -19,9 +19,9 @@ int relayToggle(String command) {
 }
 
 void setup() {
-   pinMode(PIN, OUTPUT);
+   pinMode(RELAY_PIN, OUTPUT);
    Particle.function("relay", relayToggle);
-   digitalWrite(PIN, LOW);
+   digitalWrite(RELAY_PIN, LOW);
 }
 
 void loop() {}
