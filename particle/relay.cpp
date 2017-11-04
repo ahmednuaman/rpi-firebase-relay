@@ -1,9 +1,5 @@
 #include "application.h"
 
-#if defined(ARDUINO) 
-SYSTEM_MODE(SEMI_AUTOMATIC); 
-#endif
-
 int RELAY_PIN = D7;
 
 int relayToggle(String command) {
